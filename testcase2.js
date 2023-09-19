@@ -6,7 +6,6 @@ const puppeteer = require('puppeteer-extra')
 const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 puppeteer.use(StealthPlugin());
 
- 
 puppeteer.launch({ headless: "new" }).then(async browser => {
   const page = await browser.newPage();
   await page.goto("https://en.wikipedia.org/wiki/Web_scraping");
